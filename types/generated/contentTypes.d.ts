@@ -376,9 +376,10 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     description: Attribute.RichText;
-    thumbnail: Attribute.Media;
+    thumbnail: Attribute.Media<'images'>;
     content: Attribute.RichText;
     slug: Attribute.UID<'api::blog.blog', 'title'>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
