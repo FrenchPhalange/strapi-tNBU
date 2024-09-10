@@ -392,6 +392,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
           preset: 'toolbar';
         }
       >;
+    tags: Attribute.Component<'tags.tags'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

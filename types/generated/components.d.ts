@@ -1,5 +1,16 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface TagsTags extends Schema.Component {
+  collectionName: 'components_tags_tags';
+  info: {
+    displayName: 'tags';
+    icon: 'apps';
+  };
+  attributes: {
+    name: Attribute.Enumeration<['Dev']>;
+  };
+}
+
 export interface SharedSeo extends Schema.Component {
   collectionName: 'components_shared_seos';
   info: {
@@ -54,6 +65,7 @@ export interface SharedMetaSocial extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'tags.tags': TagsTags;
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
     }

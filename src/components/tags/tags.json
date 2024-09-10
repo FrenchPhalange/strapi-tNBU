@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_tags_tags",
+  "info": {
+    "displayName": "tags",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Dev"
+      ]
+    }
+  }
+}
