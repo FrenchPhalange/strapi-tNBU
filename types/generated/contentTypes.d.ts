@@ -375,11 +375,23 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.RichText;
     thumbnail: Attribute.Media<'images'>;
-    content: Attribute.RichText;
     slug: Attribute.UID<'api::blog.blog', 'title'>;
     seo: Attribute.Component<'shared.seo'>;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbar';
+        }
+      >;
+    description: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbar';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

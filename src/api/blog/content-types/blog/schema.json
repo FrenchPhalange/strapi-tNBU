@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
     "thumbnail": {
       "type": "media",
       "multiple": false,
@@ -25,9 +22,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "content": {
-      "type": "richtext"
     },
     "slug": {
       "type": "uid",
@@ -37,6 +31,20 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
