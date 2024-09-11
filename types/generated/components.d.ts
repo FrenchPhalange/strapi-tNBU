@@ -5,9 +5,33 @@ export interface TagsTags extends Schema.Component {
   info: {
     displayName: 'tags';
     icon: 'apps';
+    description: '';
   };
   attributes: {
-    name: Attribute.Enumeration<['Dev']>;
+    name: Attribute.Enumeration<
+      [
+        'Dev',
+        'Annonce',
+        'Nuxt.js',
+        'Cybers\u00E9curit\u00E9',
+        'Programmation',
+        'JavaScript',
+        'Vue.js',
+        'S\u00E9curit\u00E9 informatique',
+        'D\u00E9veloppement web',
+        'API',
+        'Cloud',
+        'DevOps',
+        'R\u00E9seaux',
+        'Performance',
+        'Tutoriel',
+        'Open Source',
+        'Innovation',
+        'Framework',
+        'Frontend',
+        'Backend'
+      ]
+    >;
   };
 }
 

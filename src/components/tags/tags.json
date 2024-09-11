@@ -2,14 +2,34 @@
   "collectionName": "components_tags_tags",
   "info": {
     "displayName": "tags",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "name": {
       "type": "enumeration",
       "enum": [
-        "Dev"
+        "Dev",
+        "Annonce",
+        "Nuxt.js",
+        "Cybersécurité",
+        "Programmation",
+        "JavaScript",
+        "Vue.js",
+        "Sécurité informatique",
+        "Développement web",
+        "API",
+        "Cloud",
+        "DevOps",
+        "Réseaux",
+        "Performance",
+        "Tutoriel",
+        "Open Source",
+        "Innovation",
+        "Framework",
+        "Frontend",
+        "Backend"
       ]
     }
   }
