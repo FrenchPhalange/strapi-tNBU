@@ -1,40 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface TagsTags extends Schema.Component {
-  collectionName: 'components_tags_tags';
-  info: {
-    displayName: 'tags';
-    icon: 'apps';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.Enumeration<
-      [
-        'Dev',
-        'Annonce',
-        'Nuxt.js',
-        'Cybers\u00E9curit\u00E9',
-        'Programmation',
-        'JavaScript',
-        'Vue.js',
-        'S\u00E9curit\u00E9 informatique',
-        'D\u00E9veloppement web',
-        'API',
-        'Cloud',
-        'DevOps',
-        'R\u00E9seaux',
-        'Performance',
-        'Tutoriel',
-        'Open Source',
-        'Innovation',
-        'Framework',
-        'Frontend',
-        'Backend'
-      ]
-    >;
-  };
-}
-
 export interface SharedSeo extends Schema.Component {
   collectionName: 'components_shared_seos';
   info: {
@@ -86,12 +51,47 @@ export interface SharedMetaSocial extends Schema.Component {
   };
 }
 
+export interface TagsTags extends Schema.Component {
+  collectionName: 'components_tags_tags';
+  info: {
+    displayName: 'tags';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.Enumeration<
+      [
+        'Dev',
+        'Annonce',
+        'Nuxt.js',
+        'Cybers\u00E9curit\u00E9',
+        'Programmation',
+        'JavaScript',
+        'Vue.js',
+        'S\u00E9curit\u00E9 informatique',
+        'D\u00E9veloppement web',
+        'API',
+        'Cloud',
+        'DevOps',
+        'R\u00E9seaux',
+        'Performance',
+        'Tutoriel',
+        'Open Source',
+        'Innovation',
+        'Framework',
+        'Frontend',
+        'Backend'
+      ]
+    >;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'tags.tags': TagsTags;
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
+      'tags.tags': TagsTags;
     }
   }
 }
